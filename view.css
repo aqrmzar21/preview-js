@@ -80,14 +80,17 @@ body {
 
 .sm {
   position: absolute;
-  bottom: -30px;
-  right: 30px;
+  top: 0px;
+  right: 44%;
   display: flex;
   justify-content: space-between;
   /* width: 150px; */
   padding: 10px 20px;
 }
 
+.sm li a {
+  text-decoration: none;
+}
 .sm li {
   list-style: none;
   margin: 0 10px;
