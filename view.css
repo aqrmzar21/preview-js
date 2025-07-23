@@ -76,6 +76,41 @@ body {
   animation: fadeIN 0.9s forwards;
 }
 
+/* Ikon small */
+
+.fc {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* width: 150px; */
+  padding: 10px 20px;
+}
+
+.fc li {
+  list-style: none;
+  margin: 0 10px;
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); */
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+/* EFEK ICON */
+.icon {
+  color: #fff;
+  animation: first_color 0.5s ease-in-out infinite alternate;
+}
+
+.icon:nth-child(2) {
+  animation-name: second_color;
+}
+
+.icon:nth-child(3) {
+  animation-name: third_color;
+}
+
 /* Animasi */
 @keyframes fadeIN {
   to {
