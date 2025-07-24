@@ -32,3 +32,13 @@ sec.addEventListener("dblclick", function (a) {
     a.target.classList.add("active");
   }
 });
+
+const sebelum = document.querySelector("#prev");
+const sesudah = document.getElementById("prev");
+
+sebelum.addEventListener("click", function (x) {
+  alert("OK");
+});
+sesudah.addEventListener("click", function (x) {
+  alert("OK");
+});
