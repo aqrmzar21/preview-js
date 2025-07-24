@@ -62,6 +62,8 @@ body {
   border-radius: 10px;
   border: 2px solid #4a0077;
   cursor: pointer;
+  width: 200px;
+  object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .gambar:hover {
