@@ -135,3 +135,14 @@ body {
 .hidden {
   display: none;
 }
+/* Tombol Prev/Next Keren */
+.prev, .next {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #4e008e, #8b2fff);
+  color: white;
+  box-shadow: 0 0 15px rgba(143, 99, 255, 0.5);
+  margin: 0 20px;
+}

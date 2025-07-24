@@ -18,9 +18,9 @@ sec.addEventListener("dblclick", function (a) {
     inNama.innerHTML = alt;
     // inNama.style.color = "#4e008e";
     inNama.style.color = "#fff";
-    inNama.style.fontSize = "2em";
+    inNama.style.fontSize = "1.5em";
     inNama.style.textShadow = "#4a0077 -1px -1px 30px";
-    inNama.style.border = "2px solid #4e008e";
+    inNama.style.border = "2.2px solid #4e008e";
     inNama.style.borderRadius = "50px";
     inNama.style.padding = "0 10rem 10px";
     setTimeout(function () {

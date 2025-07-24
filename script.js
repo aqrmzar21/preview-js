@@ -1,20 +1,18 @@
-// Ambil semua elemen yang dibutuhkan
+// Ambil elemen penting
 const pilihGambar = document.querySelector(".terpilih");
 const imGambar = document.querySelectorAll(".gambar");
 const inNama = document.querySelector("#nama");
-const konten = document.querySelector("#container");
-const sebelum = konten.querySelector(".prev");
-const sesudah = konten.querySelector(".next");
+const sebelum = document.querySelector(".prev");
+const sesudah = document.querySelector(".next");
 
-// Variabel untuk menyimpan indeks gambar aktif
 let gambarAktifIndex = null;
 
-// Fungsi untuk menampilkan gambar yang dipilih
+// Fungsi untuk update tampilan gambar
 function tampilkanGambar(elemen) {
-  const sumber = elemen.getAttribute("src");
+  const src = elemen.getAttribute("src");
   const alt = elemen.getAttribute("alt");
 
-  pilihGambar.setAttribute("src", sumber);
+  pilihGambar.setAttribute("src", src);
   pilihGambar.classList.add("fade");
 
   inNama.innerHTML = alt;
@@ -31,20 +29,25 @@ function tampilkanGambar(elemen) {
 
   imGambar.forEach((g) => (g.className = "gambar"));
   elemen.classList.add("active");
+
+  updateNavigasi();
 }
 
-// Tambahkan event listener ke setiap gambar
-imGambar.forEach((gbr, index) => {
-  gbr.addEventListener("dblclick", () => {
-    gambarAktifIndex = index;
-    tampilkanGambar(gbr);
+// Fungsi untuk update visibilitas tombol Prev/Next
+function updateNavigasi() {
+  sebelum.classList.toggle("hidden", gambarAktifIndex === 0);
+  sesudah.classList.toggle("hidden", gambarAktifIndex === imGambar.length - 1);
+}
 
-    sebelum.classList.remove("hidden");
-    sesudah.classList.remove("hidden");
+// Event klik ganda di gambar
+imGambar.forEach((gambar, index) => {
+  gambar.addEventListener("dblclick", () => {
+    gambarAktifIndex = index;
+    tampilkanGambar(gambar);
   });
 });
 
-// Navigasi ke gambar sebelumnya
+// Navigasi sebelumnya
 sebelum.addEventListener("click", () => {
   if (gambarAktifIndex > 0) {
     gambarAktifIndex--;
@@ -52,10 +55,23 @@ sebelum.addEventListener("click", () => {
   }
 });
 
-// Navigasi ke gambar berikutnya
+// Navigasi berikutnya
 sesudah.addEventListener("click", () => {
   if (gambarAktifIndex < imGambar.length - 1) {
     gambarAktifIndex++;
     tampilkanGambar(imGambar[gambarAktifIndex]);
+  }
+});
+
+// Navigasi dengan keyboard arrow
+document.addEventListener("keydown", (e) => {
+  if (gambarAktifIndex !== null) {
+    if (e.key === "ArrowLeft" && gambarAktifIndex > 0) {
+      gambarAktifIndex--;
+      tampilkanGambar(imGambar[gambarAktifIndex]);
+    } else if (e.key === "ArrowRight" && gambarAktifIndex < imGambar.length - 1) {
+      gambarAktifIndex++;
+      tampilkanGambar(imGambar[gambarAktifIndex]);
+    }
   }
 });
