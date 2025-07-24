@@ -33,28 +33,32 @@ sec.addEventListener("dblclick", function (a) {
     a.target.classList.add("active");
   }
   const pre = a.target.previousElementSibling;
-  const nex = a.target.nextElementSibling;
-  // console.log(nex);
-  // console.log(pre.getAttribute('src'))
+  const nex = a.target.nextElementSibling.getAttribute("src");
+  // console.log(x.target);
+  let ganti = pre.getAttribute("src");
+  console.log(ganti);
+  sebelum.addEventListener("click", function (x) {
+    // alert("OK");
+    pilihGambar.setAttribute("src", ganti);
+  });
+  sebelum.classList.remove("hidden");
+  sesudah.classList.remove("hidden");
+  sesudah.addEventListener("click", function (y) {
+    // console.log("OK");
+    pilihGambar.setAttribute("src", nex);
+  });
+  // console.log("OK");
 });
 
-// const akt = document.querySelector(".active");
 const sebelum = konten.querySelector(".prev");
 const sesudah = konten.querySelector(".next");
 // sebelum.style.display = 'none'
 // sesudah.style.display = 'none'
 
-imGambar.forEach(function (el) {
-  sebelum.addEventListener("click", function (x) {
-    // if (x.target.className == "active") {
-    let a = el.target;
-    console.log(a);
-    // }
-    // alert("OK");
-    // console.log(akt);
-  });
-});
-
-sesudah.addEventListener("click", function (y) {
-  console.log("OK");
-});
+// imGambar.forEach(function (el) {
+// const akt = document.querySelector(".active");
+// if (pre.className == "gambar") {
+// }
+// if (akt.className == "active") {
+// let lihat = x.target;
+// });

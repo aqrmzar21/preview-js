@@ -67,7 +67,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .gambar:hover {
-  transform: scale(.8);
+  transform: scale(0.8);
   box-shadow: 0 0 10px rgba(128, 0, 255, 0.5);
 }
 .active {
@@ -130,4 +130,8 @@ body {
   #b {
     max-width: 100%;
   }
+}
+
+.hidden {
+  display: none;
 }
