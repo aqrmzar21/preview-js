@@ -54,7 +54,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 .terpilih:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Gambar List */
@@ -67,7 +67,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .gambar:hover {
-  transform: scale(1.1);
+  transform: scale(.8);
   box-shadow: 0 0 10px rgba(128, 0, 255, 0.5);
 }
 .active {
@@ -83,7 +83,7 @@ body {
 .sm {
   position: absolute;
   top: 0px;
-  right: 44%;
+  right: 50%;
   display: flex;
   justify-content: space-between;
   /* width: 150px; */
