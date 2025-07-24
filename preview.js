@@ -2,7 +2,7 @@ const pilihGambar = document.querySelector(".terpilih");
 const imGambar = document.querySelectorAll(".gambar");
 const inNama = document.querySelector("#nama");
 
-const sec = document.querySelector("section#a");
+const sec = document.querySelector("section#b");
 sec.addEventListener("dblclick", function (a) {
   if (a.target.className == "gambar") {
     // alert('OK')
@@ -21,7 +21,7 @@ sec.addEventListener("dblclick", function (a) {
     inNama.style.textShadow = "#4a0077 -1px -1px 30px";
     inNama.style.border = "2px solid #4e008e";
     inNama.style.borderRadius = "50px";
-    inNama.style.padding = "0 17rem 15px";
+    inNama.style.padding = "0 10rem 15px";
     setTimeout(function () {
       pilihGambar.classList.remove("fade");
     }, 500);

@@ -28,7 +28,7 @@ body {
 }
 
 /* Bagian preview gambar terpilih */
-#b {
+#a {
   width: 40%;
   border-radius: 10px;
   padding: 20px;
@@ -36,7 +36,7 @@ body {
 }
 
 /* Bagian list gambar */
-#a {
+#b {
   width: 40%;
   display: flex;
   flex-wrap: wrap;
@@ -128,8 +128,8 @@ body {
     flex-direction: row;
     align-items: center;
   }
-  #b,
-  #a {
+  #a,
+  #b {
     max-width: 100%;
   }
 }
