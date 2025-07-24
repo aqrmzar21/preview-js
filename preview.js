@@ -2,7 +2,8 @@ const pilihGambar = document.querySelector(".terpilih");
 const imGambar = document.querySelectorAll(".gambar");
 const inNama = document.querySelector("#nama");
 
-const sec = document.querySelector("section#b");
+const konten = document.querySelector("#container");
+const sec = konten.querySelector("section#b");
 sec.addEventListener("dblclick", function (a) {
   if (a.target.className == "gambar") {
     // alert('OK')
@@ -31,14 +32,29 @@ sec.addEventListener("dblclick", function (a) {
     });
     a.target.classList.add("active");
   }
+  const pre = a.target.previousElementSibling;
+  const nex = a.target.nextElementSibling;
+  // console.log(nex);
+  // console.log(pre.getAttribute('src'))
 });
 
-const sebelum = document.querySelector("#prev");
-const sesudah = document.getElementById("prev");
+// const akt = document.querySelector(".active");
+const sebelum = konten.querySelector(".prev");
+const sesudah = konten.querySelector(".next");
+// sebelum.style.display = 'none'
+// sesudah.style.display = 'none'
 
-sebelum.addEventListener("click", function (x) {
-  alert("OK");
+imGambar.forEach(function (el) {
+  sebelum.addEventListener("click", function (x) {
+    // if (x.target.className == "active") {
+    let a = el.target;
+    console.log(a);
+    // }
+    // alert("OK");
+    // console.log(akt);
+  });
 });
-sesudah.addEventListener("click", function (x) {
-  alert("OK");
+
+sesudah.addEventListener("click", function (y) {
+  console.log("OK");
 });
