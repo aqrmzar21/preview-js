@@ -15,12 +15,13 @@ sec.addEventListener("dblclick", function (a) {
     // masukkan class baru dalam elemt terpilih
     pilihGambar.classList.add("fade");
     inNama.innerHTML = alt;
-    inNama.style.color = "#4e008e";
-    inNama.style.fontSize = "3em";
-    // inNama.style.textShadow = "white -1px -1px 30px";
+    // inNama.style.color = "#4e008e";
+    inNama.style.color = "#fff";
+    inNama.style.fontSize = "2em";
+    inNama.style.textShadow = "#4a0077 -1px -1px 30px";
     inNama.style.border = "2px solid #4e008e";
     inNama.style.borderRadius = "50px";
-    inNama.style.padding = "0 17rem";
+    inNama.style.padding = "0 17rem 15px";
     setTimeout(function () {
       pilihGambar.classList.remove("fade");
     }, 500);
